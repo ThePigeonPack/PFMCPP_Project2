@@ -15,12 +15,13 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
- 
- 
- 
- 
- 
- 
+ int
+ float
+ char
+ bool
+ double
+ unsigned int
+
  
  
  
@@ -59,10 +60,27 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
+    int televisions = 1;
+    int computerMonitors = 2;
+    int laptops = 4;
+    float schisms = 2.f;
+    float pagesWritten = 4.5f;
+    float pillows = 9.f;
+    bool amIAsleep = false;
+    bool wouldILikeToBe = true;
+    bool canIMakeIt = true;
+    char firstInitial = 't';
+    char middleInitial = 'p';
+    char lastInitial = 'p';
+    double guitarAmps = 2;
+    double workingAmps = 1.5;
+    double guitars = 1000;
+    unsigned int hoursAsleep = 8;
+    unsigned int hoursAwake = 8;
+    unsigned int hoursInBetween = 16;
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, televisions, computerMonitors, laptops, schisms, pagesWritten,pillows, hoursAsleep, hoursAwake, hoursInBetween, firstInitial, middleInitial, lastInitial, guitarAmps, workingAmps, guitars, amIAsleep, wouldILikeToBe, canIMakeIt); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,43 +97,80 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int thinkOfFunctions(int codesLearned, int ideasForNames, int hours)
+{
+    ignoreUnused(codesLearned, ideasForNames, hours);
+    return {};
+}
 /*
  2)
  */
-
+bool buyNewGear(bool seeGearIWant, int money = 0)
+{
+    ignoreUnused(seeGearIWant,money);
+    return {};
+}
 /*
  3)
  */
-
+void watchTV(int freeTime, double channels, int volume = 100, int televisions = 1)
+{
+    ignoreUnused(freeTime, channels, volume, televisions);
+}
 /*
  4)
  */
-
+int affectChange(int passion)
+{
+    ignoreUnused(passion);
+    return {};
+}
 /*
  5)
  */
-
+int doISleep(bool amIAsleep, bool wouldILikeToBe, unsigned int hoursAsleep, unsigned int hoursAwake, unsigned int hoursInBetween)
+{
+    ignoreUnused(amIAsleep, wouldILikeToBe, hoursAsleep, hoursAwake, hoursInBetween);
+    return {};
+}
 /*
  6)
  */
-
+int doMakeup(int colors, int tools)
+{
+    ignoreUnused(colors, tools);
+    return {};
+}
 /*
  7)
  */
-
+int writeSong(int lyrics, int instruments, int melodies = 2)
+{
+    ignoreUnused(lyrics, instruments, melodies);
+    return {};
+}
 /*
  8)
  */
-
+int buildAStudio(int plan, int lumber, int gear, int money, int helpingHands)
+{
+    ignoreUnused(plan, lumber, gear, money, helpingHands);
+    return {};
+}
 /*
  9)
  */
-
+void applyForJobs(int resumeQuality = 0, bool coverLetter = false, float interestInJob = 0.f)
+{
+    ignoreUnused(resumeQuality, coverLetter, interestInJob);
+}
 /*
  10)
  */
-
+void boardGame(int theGame, int friends, double snacks = 9999)
+{
+    ignoreUnused(theGame, friends, snacks);
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -136,27 +191,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto myFunctions = thinkOfFunctions(1, 10, 18);
     //2)
-    
+    auto newGear = buyNewGear(true);
     //3)
-    
+    watchTV(2, 500, 100, 1);
     //4)
-    
+    auto activism = affectChange(1);
     //5)
-    
+    auto sleepSchedule = doISleep(false, true, 8, 8, 16);
     //6)
-    
+    auto goodLooks = doMakeup(256, 5);
     //7)
-    
+    auto hitSingle = writeSong(1, 4);
     //8)
-    
+    auto recordingStudio = buildAStudio(1, 100, 50, 1000, 9);
     //9)
-    
+    applyForJobs();
     //10)
+    boardGame(1, 3);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, myFunctions, newGear, activism, sleepSchedule, goodLooks, hitSingle, recordingStudio);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
