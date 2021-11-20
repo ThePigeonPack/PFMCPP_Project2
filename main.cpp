@@ -97,7 +97,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-int thinkOfFunctions(int codesLearned, int ideasForNames,int hours)
+int thinkOfFunctions(int codesLearned, int ideasForNames, int hours)
 {
     ignoreUnused(codesLearned, ideasForNames, hours);
     return {};
@@ -128,7 +128,7 @@ int affectChange(int passion)
 /*
  5)
  */
-int doISleep(bool amIAsleep, bool wouldILikeToBe, unsigned int hoursAsleep, unsigned int hoursAwake,unsigned int hoursInBetween)
+int doISleep(bool amIAsleep, bool wouldILikeToBe, unsigned int hoursAsleep, unsigned int hoursAwake, unsigned int hoursInBetween)
 {
     ignoreUnused(amIAsleep, wouldILikeToBe, hoursAsleep, hoursAwake, hoursInBetween);
     return {};
